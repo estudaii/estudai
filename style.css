@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wm { /*withmargin*/
+	margin: 8px;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.gbpry { /*gradient blue pink red yellow*/
+	background: linear-gradient(to right, blue, #ff00ff, red, yellow);
+	width: 100%;
+	height: 100px;
+}
+
+#hpb { /*homepagebutton*/
+	position: relative;
+	left: 50px;
+	top: 50px;
+	width: 75px;
+	height: 75px;
+	transform: translate(-50%,-50%);
+	transition: width 500ms ease-in-out, height 500ms ease-in-out;
+	user-select: none;
+}
+
+#hpb:hover {
+	width: 100px;
+	height: 100px;
+	transition: width 500ms ease-in-out, height 500ms ease-in-out;
+}
+
+@keyframes ex {
+	100% {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@keyframes im {
+	100% {
+		width: 75px;
+		height: 75px;
+	}
+}
+
+#em { /*estudai maluco*/
+	color: white;
+	user-select: none;
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	font-size: 30px;
+	transform: translate(-50%, -50%);
+	text-shadow:
+		-2px -2px 0 black,
+		2px -2px 0 black,
+		-2px 2px 0 black,
+		2px 2px 0 black,
+		0px 0px 4px black;
+}
