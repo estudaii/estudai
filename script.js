@@ -5,6 +5,12 @@ const fontes = [
     { nome: 'Lucida Handwriting' }
 ];
 
+WebFont.load({
+	google:{
+		families: ["Quicksand"]
+	}
+});
+
 // Guardar só as que foram carregadas com sucesso
 let fontesCarregadas = [];
 
