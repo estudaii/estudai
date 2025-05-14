@@ -62,3 +62,25 @@
 		2px 2px 0 black,
 		0px 0px 4px black;
 }
+
+.pagina {
+  background-color: white;
+  width: 113vw;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* essa é a sombra */
+  font-family: sans-serif;
+  height: 113vw; /* altura proporcional */
+  max-height: 1131px;
+}
+
+.qs {
+	font-family: 'Quicksand';
+	font-size: 20px;
+}
+
+.qst { /*quicksand title*/
+	font-family: 'Quicksand';
+}
