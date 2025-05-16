@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 .wm { /*withmargin*/
 	margin: 8px;
 	padding: 0;
@@ -13,7 +18,7 @@
 .gbpry { /*gradient blue pink red yellow*/
 	background: linear-gradient(to right, blue, #ff00ff, red, yellow);
 	width: 100%;
-	height: 100px;
+	height: 75px;
 }
 
 #hpb { /*homepagebutton*/
@@ -63,7 +68,8 @@
 		0px 0px 4px black;
 }
 
-.pagina {
+pagina {
+	display: block;
   background-color: white;
   width: 113vw;
   max-width: 800px;
@@ -83,4 +89,37 @@
 
 .qst { /*quicksand title*/
 	font-family: 'Quicksand';
+}
+
+.sectioner {
+	display: flex;
+	justify-content: center;
+	background-color: white;
+	width: 100vw;
+	height: 50px;
+}
+
+.sectioner button {
+	/*all: unset;*/
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-family: 'Quicksand';
+	font-size: 18px;
+	background-color: white;
+	height: 100%;
+	width: 75px;
+	justify-content: center;
+	transition: background-color 100ms ease-in-out;
+}
+
+.sectioner button:hover {
+	background-color: #bfbfbf;
+	transition: background-color 100ms ease-in-out;
+}
+
+.sectioner button:active {
+	background-color: #7f7f7f;
+	transition: background-color 100ms ease-in-out;
 }
