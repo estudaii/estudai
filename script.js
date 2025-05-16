@@ -1,63 +1,38 @@
-const fontes = [
-    { nome: 'Cutive Mono', google: 'Cutive Mono' }, // já é web-safe
-    { nome: 'Dokdo', google: 'Dokdo' }, // web-safe
-    { nome: 'Jockey One', google: "Jockey One" }, // web-safe
-    { nome: 'Kalam', google: 'Kalam' }
+const todasFontes = [
+  'Quicksand',
+  'Cutive Mono',
+  'Dokdo',
+  'Jockey One',
+  'Kalam'
+];
+
+const fontesParaTrocar = [
+  'Cutive Mono',
+  'Dokdo',
+  'Jockey One',
+  'Kalam'
 ];
 
 WebFont.load({
-	google:{
-		families: ["Quicksand"]
-	}
+  google: {
+    families: todasFontes
+  },
+  active: () => {
+    let fontesDisponiveis = [...fontesParaTrocar];
+
+    setInterval(() => {
+      if (fontesDisponiveis.length === 0) {
+        fontesDisponiveis = [...fontesParaTrocar];
+      }
+      const i = Math.floor(Math.random() * fontesDisponiveis.length);
+      const fonte = fontesDisponiveis.splice(i, 1)[0];
+      const elem = document.getElementById('em');
+      if (elem) {
+        elem.style.fontFamily = `'${fonte}', sans-serif`;
+      }
+    }, 1000);
+  },
+  inactive: () => {
+    console.error('Falha ao carregar as fontes do Google Fonts');
+  }
 });
-
-// Guardar só as que foram carregadas com sucesso
-let fontesCarregadas = [];
-
-// Carregar fontes do Google Fonts se necessário
-const fontesGoogle = fontes
-  .filter(f => f.google)
-  .map(f => f.google);
-
-if (fontesGoogle.length > 0) {
-    WebFont.load({
-        google: {
-            families: fontesGoogle
-        },
-        active: () => {
-            // Após carregamento, considerar todas como carregadas
-            fontesCarregadas = fontes.map(f => f.nome);
-        },
-        inactive: () => {
-            // Caso não consiga carregar do Google, usa só as locais
-            fontesCarregadas = fontes
-                .filter(f => !f.google)
-                .map(f => f.nome);
-        }
-    });
-} else {
-    // Se não tem nenhuma fonte externa, usa todas locais direto
-    fontesCarregadas = fontes.map(f => f.nome);
-}
-
-// Trocar a fonte a cada segundo
-let fontesDisponiveis = [];
-
-function escolherFonte() {
-    if (fontesDisponiveis.length === 0) {
-        fontesDisponiveis = [...fontesCarregadas];
-    }
-    const i = Math.floor(Math.random() * fontesDisponiveis.length);
-    return fontesDisponiveis.splice(i, 1)[0];
-}
-
-function mudarFonte(fonte) {
-    const elem = document.getElementById('em');
-    if (elem) {elem.style.fontFamily = `'${fonte}', sans-serif`};
-}
-
-setInterval(() => {
-    if (fontesCarregadas.length > 0) {
-        mudarFonte(escolherFonte());
-    }
-}, 1000);
