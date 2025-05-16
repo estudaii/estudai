@@ -7,7 +7,7 @@ const fontes = [
 
 WebFont.load({
 	google:{
-		families: ["Quicksand","Cutive Mono","Dokdo","Jockey One","Kalam"]
+		families: ["Quicksand"]
 	}
 });
 
