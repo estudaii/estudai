@@ -1,8 +1,8 @@
 const fontes = [
-    { nome: 'Courier New' }, // já é web-safe
-    { nome: 'Comic Sans MS' }, // web-safe
-    { nome: 'Impact' }, // web-safe
-    { nome: 'Lucida Handwriting' }
+    { nome: 'Courier New', google: 'Courier New' }, // já é web-safe
+    { nome: 'Comic Sans MS', google: 'Comic Sans MS' }, // web-safe
+    { nome: 'Impact', google: 'Impact' }, // web-safe
+    { nome: 'Lucida Handwriting', google: 'Lucida Handwriting' }
 ];
 
 WebFont.load({
