@@ -7,7 +7,7 @@ const fontes = [
 
 WebFont.load({
 	google:{
-		families: ["Quicksand"]
+		families: ["Quicksand","Courier New","Comic Sans MS","Impact","Lucida Handwriting"]
 	}
 });
 
