@@ -1,13 +1,13 @@
 const fontes = [
-    { nome: 'Courier New', google: 'Courier New' }, // já é web-safe
-    { nome: 'Comic Sans MS', google: 'Comic Sans MS' }, // web-safe
-    { nome: 'Impact', google: 'Impact' }, // web-safe
-    { nome: 'Lucida Handwriting', google: 'Lucida Handwriting' }
+    { nome: 'Cutive Mono', google: 'Cutive Mono' }, // já é web-safe
+    { nome: 'Dokdo', google: 'Dokdo' }, // web-safe
+    { nome: 'Jockey One', google: "Jockey One" }, // web-safe
+    { nome: 'Kalam', google: 'Kalam' }
 ];
 
 WebFont.load({
 	google:{
-		families: ["Quicksand","Courier New","Comic Sans MS","Impact","Lucida Handwriting"]
+		families: ["Quicksand","Cutive Mono","Dokdo","Jockey One","Kalam"]
 	}
 });
 
@@ -53,7 +53,7 @@ function escolherFonte() {
 
 function mudarFonte(fonte) {
     const elem = document.getElementById('em');
-    if (elem) elem.style.fontFamily = `'${fonte}', sans-serif`;
+    if (elem) {elem.style.fontFamily = `'${fonte}', sans-serif`};
 }
 
 setInterval(() => {
