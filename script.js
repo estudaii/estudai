@@ -1,9 +1,13 @@
 const todasFontes = [
-  'Quicksand',
-  'Cutive Mono',
-  'Dokdo',
-  'Jockey One',
-  'Kalam'
+	'Quicksand',
+	'Quicksand:400',
+	'Quicksand:500',
+	'Quicksand:600',
+	'Quicksand:700',
+	'Cutive Mono',
+	'Dokdo',
+	'Jockey One',
+	'Kalam'
 ];
 
 const fontesParaTrocar = [
