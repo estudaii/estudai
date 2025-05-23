@@ -127,7 +127,7 @@ paginad {
 	font-size: 18px;
 	background-color: white;
 	height: 100%;
-	width: 75px;
+	width: 100px;
 	justify-content: center;
 	transition: background-color 100ms ease-in-out;
 }
@@ -149,7 +149,7 @@ materia {
 	max-width: 200px;
 	height: 48vw;
 	max-height: 150px;
-	box-shadow: 0 8px 10px black;
+	box-shadow: 0 4px 10px black;
 	border-radius: 32px;
 	padding: 16px 16px;
 	margin: 16px 16px;
@@ -181,4 +181,78 @@ lll {
 
 a {
 	text-decoration: none;
+}
+
+capitulo {
+	display: flex;
+	width: 100%;
+	height: 50px;
+	background-color: #efefef;
+	border-radius: 12px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 20px;
+	font-family: 'Quicksand';
+	font-weight: 600;
+	font-size: 16px;
+	user-select: none;
+	cursor: pointer;
+	color: black;
+	transition: background-color 100ms ease-in-out;
+}
+
+capitulo:hover {
+	background-color: #bfbfbf;
+	transition: background-color 100ms ease-in-out;
+}
+
+capitulo:active {
+	background-color: #7f7f7f;
+	transition: background-color 100ms ease-in-out;
+}
+
+obj {
+	display: flex;
+	width: 75%;
+	height: 50px;
+	background-color: #efefef;
+	border-radius: 12px;
+	text-align: right;
+	justify-content: right;
+	align-items: center;
+	padding: 20px 20px;
+	font-family: 'Quicksand';
+	font-weight: 600;
+	font-size: 16px;
+	user-select: none;
+	cursor: pointer;
+	color: black;
+	transition: background-color 100ms ease-in-out;
+}
+
+obj:hover {
+	background-color: #bfbfbf;
+	transition: background-color 100ms ease-in-out;
+}
+
+obj:active {
+	background-color: #7f7f7f;
+	transition: background-color 100ms ease-in-out;
+}
+
+#chaps * {
+	display: flex;
+	pointer-events: auto;
+	justify-content: right;
+}
+
+.fixed {
+	position: fixed;
+	top: 50px;
+}
+
+.absolute {
+	position: absolute;
+	top: 200px;
 }
