@@ -22,15 +22,7 @@ const c = params.get("c");
 const title = document.getElementById("title");
 
 if (c === "exps") {
-	document.getElementById("por").href = "Português/Explicação/index.html";
-	document.getElementById("mat").href = "Matemática/Explicação";
-	document.getElementById("ing").href = "Inglês/Explicação";
-	document.getElementById("sci").href = "Ciências/Explicação";
-	document.getElementById("geo").href = "Geografia/Explicação";
-	document.getElementById("his").href = "História/Explicação";
-	document.getElementById("fil").href = "Filosofia/Explicação";
-	document.getElementById("art").href = "Artes/Explicação";
-	document.getElementById("edf").href = "Educação-Física/Explicação";
+	document.getElementById("por").href = "Português/Explicação/";
 	title.textContent = "Explicações";
 } else if (c === "rsms") {
 	title.textContent = "Resumos";
