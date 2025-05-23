@@ -22,7 +22,7 @@ const c = params.get("c");
 const title = document.getElementById("title");
 
 if (c === "exps") {
-	document.getElementById("por").href = "Português/Explicação/";
+	document.getElementById("por").href = "Português/Explicação";
 	title.textContent = "Explicações";
 } else if (c === "rsms") {
 	title.textContent = "Resumos";
