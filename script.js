@@ -35,7 +35,7 @@ function irr(min,max) { /*integerRandomRange*/
 };
 
 if (c === "exps") {
-	por.href = "https://www.youtube.com";
+	por.href = "Português/Explicação";
 	title.textContent = "Explicações";
 } else if (c === "rsms") {
 	//por.href = "Português/Resumo/index.html";
