@@ -1,3 +1,4 @@
+location.reload();
 const todasFontes = [
 	'Quicksand',
 	'Quicksand:400',
