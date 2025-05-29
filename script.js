@@ -35,7 +35,7 @@ function irr(min,max) { /*integerRandomRange*/
 };
 
 if (c === "exps") {
-	por.href = "Português/Explicação";
+	por.href = "Português/Explicação/index.html";
 	title.textContent = "Explicações";
 } else if (c === "rsms") {
 	//por.href = "Português/Resumo/index.html";
@@ -44,7 +44,7 @@ if (c === "exps") {
 	//por.href = "Português/Vídeo/index.html";
 	title.textContent = "Vídeos";
 } else if (c === "quiz") {
-	//por.href = "../Quiz/index.html?m=por";
+	por.href = "../Quiz/index.html?m=por";
 	title.textContent = "Quizzes";
 }
 
@@ -147,7 +147,7 @@ const quizu = 0;
 const nivel = document.getElementById("nivel");
 const ir = quizzesMat.basica.length - 1;
 const ir2 = quizzesMat.avancada.length - 1;
-nivel.value = "basica";
+if (nivel) {nivel.value = "basica";}
 let qa = irr(0,ir);
 const gatito = document.getElementById("gatito");
 const fader = document.getElementById("fader");
@@ -178,6 +178,7 @@ function tome(a) {
 	}, 5000);
 }
 
+if (nivel) {
 nivel.addEventListener("change",function() {
 	let titulo = document.getElementById("titulo");
 	let desc = document.getElementById("desc");
@@ -185,7 +186,7 @@ nivel.addEventListener("change",function() {
 	
 	titulo.innerText = quizzesMat[nivel.value][qa].titulo;
 	desc.innerHTML = quizzesMat[nivel.value][qa].desc;
-});
+})};
 
 if (isMobile()) {
 	let sectioner = document.querySelectorAll(".sectioner");
