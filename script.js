@@ -35,7 +35,7 @@ function irr(min,max) { /*integerRandomRange*/
 };
 
 if (c === "exps") {
-	por.href = "https://estudaii.github.io/estudai/Português/Explicação";
+	por.href = "https://estudaii.github.io/estudai/Matérias/Português/Explicação";
 	title.textContent = "Explicações";
 } else if (c === "rsms") {
 	//por.href = "Português/Resumo/index.html";
