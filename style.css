@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+button {
+	border: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -68,10 +72,12 @@ html {
 		0px 0px 4px black;
 }
 
-pagina {
-	display: block;
+.pagina {
+	display: flex;
+	position: relative;
+	flex-direction: column;
 	background-color: white;
-	width: 80vw;
+	width: 100vw;
 	max-width: 800px;
 	margin: 50px auto;
 	padding: 40px;
@@ -83,20 +89,22 @@ pagina {
 	max-height: 1131px;*/
 }
 
-paginad {
+.paginad {
 	display: block;
+	position: relative;
 	background-color: white;
-	width: 80vw;
+	width: 100vw;
 	max-width: 800px;
 	margin: 50px auto;
 	padding: 40px;
 	border-radius: 32px;
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* essa é a sombra */
-	font-family: sans-serif;
+	font-family: 'Quicksand', sans-serif;
 /*	aspect-ratio: 1000/1414;
 	height: 113vw;
 	max-height: 1131px;*/
 }
+
 
 
 .qs {
@@ -142,13 +150,18 @@ paginad {
 	transition: background-color 100ms ease-in-out;
 }
 
-materia {
+.sectionerm button {
+	width: 64px;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.materia {
 	display: flex;
 	background: white;
 	width: 64vw;
 	max-width: 200px;
-	height: 48vw;
-	max-height: 150px;
+	aspect-ratio: 4 / 3;
 	box-shadow: 0 4px 10px black;
 	border-radius: 32px;
 	padding: 16px 16px;
@@ -165,6 +178,13 @@ materia {
 	text-align: center;
 }
 
+.materiam {
+	max-width: 100px;
+	box-shadow: 0 2px 5px black;
+	border-radius: 16px;
+	font-size: 16px;
+}
+
 materia:hover {
 	transform: scale(1.2);
 	transition: transform 250ms ease-in-out;
@@ -179,16 +199,16 @@ lll {
 	margin: 8px 0;
 }
 
-a {
+.bazinga a {
 	text-decoration: none;
 }
 
-capitulo {
+.capitulo {
+	border: none;
 	display: flex;
 	width: 100%;
 	height: 50px;
-	background-color: #efefef;
-	border-radius: 12px;
+	background-color: #fff;
 	text-align: center;
 	justify-content: center;
 	align-items: center;
@@ -202,22 +222,22 @@ capitulo {
 	transition: background-color 100ms ease-in-out;
 }
 
-capitulo:hover {
+.capitulo:hover {
 	background-color: #bfbfbf;
 	transition: background-color 100ms ease-in-out;
 }
 
-capitulo:active {
+.capitulo:active {
 	background-color: #7f7f7f;
 	transition: background-color 100ms ease-in-out;
 }
 
-obj {
+.obj {
+	border: none;
 	display: flex;
-	width: 75%;
+	width: 100%;
 	height: 50px;
-	background-color: #efefef;
-	border-radius: 12px;
+	background-color: #fff;
 	text-align: right;
 	justify-content: right;
 	align-items: center;
@@ -231,20 +251,22 @@ obj {
 	transition: background-color 100ms ease-in-out;
 }
 
-obj:hover {
+.obj:hover {
 	background-color: #bfbfbf;
 	transition: background-color 100ms ease-in-out;
 }
 
-obj:active {
+.obj:active {
 	background-color: #7f7f7f;
 	transition: background-color 100ms ease-in-out;
 }
 
-#chaps * {
+#chaps {
 	display: flex;
-	pointer-events: auto;
-	justify-content: right;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: flex-end;
+	left: -340px;
 }
 
 .fixed {
@@ -252,7 +274,165 @@ obj:active {
 	top: 50px;
 }
 
+.fixed2 {
+	position: fixed;
+	top: 10px;
+}
+
+.absolute2 {
+	position: absolute;
+	top: 160px;
+}
+
 .absolute {
 	position: absolute;
 	top: 200px;
+}
+
+#menu {
+	background: none;
+	width: 20px;
+	height: 20px;
+	left: 10px;
+	cursor: pointer;
+	z-index: 10;
+}
+
+.rquiz {
+	position: absolute;
+	height: 50px;
+	width: calc(clamp(0px,50vw,400px) - 42px);
+	cursor: pointer;
+	pointer-events: auto;
+	color: white;
+	font-family: 'Quicksand';
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.ssph { /*superspecificplaceholder*/
+	width: calc(clamp(0px,100vw,800px) - 80px);
+	height: 124px;
+}
+
+#rquiz1 {
+	left: 40px;
+	bottom: 94px;
+	background-color: hsl(0, 70%, 50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+#rquiz1:hover {
+	background-color: hsl(0, 100%, 50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+#rquiz1:active {
+	background-color: hsl(0, 50%, 50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+#rquiz2 {
+	right: 40px;
+	bottom: 94px;
+	background-color: hsl(120,70%,50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+#rquiz2:hover {
+	background-color: hsl(120,100%,50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+#rquiz2:active {
+	background-color: hsl(120, 50%, 50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+#rquiz3 {
+	left: 40px;
+	bottom: 40px;
+	background-color: hsl(240,70%,50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+#rquiz3:hover {
+	background-color: hsl(240,100%,50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+#rquiz3:active {
+	background-color: hsl(240, 50%, 50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+#rquiz4 {
+	right: 40px;
+	bottom: 40px;
+	background-color: hsl(60,70%,50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+#rquiz4:hover {
+	background-color: hsl(60,100%,50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+#rquiz4:active {
+	background-color: hsl(60, 50%, 50%);
+	transition: background-color 100ms ease-in-out;
+}
+
+@keyframes anim1 {
+	from {
+		left: 0;
+	}
+	to {
+		left: -340px;
+	}
+}
+
+@keyframes anim2 {
+	from {
+		left: 330px;
+	}
+	
+	to {
+		left: 10px;
+	}
+}
+
+@keyframes anim1r {
+	from {
+		left: -340px;
+	}
+	to {
+		left: -0;
+	}
+}
+
+@keyframes anim2r {
+	from {
+		left: 10px;
+	}
+	
+	to {
+		left: 330px;
+	}
+}
+
+.anim1 {
+	animation: anim1 500ms ease-in-out forwards;
+}
+
+.anim2 {
+	animation: anim2 500ms ease-in-out forwards;
+}
+
+.anim1r {
+	animation: anim1r 500ms ease-in-out forwards;
+}
+
+.anim2r {
+	animation: anim2r 500ms ease-in-out forwards;
 }
