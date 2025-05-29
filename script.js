@@ -44,7 +44,7 @@ if (c === "exps") {
 	//por.href = "Português/Vídeo/index.html";
 	title.textContent = "Vídeos";
 } else if (c === "quiz") {
-	por.href = "../Quiz/index.html?m=por";
+	//por.href = "../Quiz/index.html?m=por";
 	title.textContent = "Quizzes";
 }
 
