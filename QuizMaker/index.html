@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<!-- quiz-maker -->
+	<head>
+		<title>Estudaí</title>
+		<link rel="icon" href="../Imagens/favicon.png" type="image/png">
+		<link rel="stylesheet" href="../style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body style="background-image: url('../Imagens/1024x1024.png'); background-repeat: repeat;  background-size: 256px 256px; background-attachment: fixed; position: relative;">
+		<div>
+			<div class="gbpry" style="z-index: 3;">
+				<a href="https://estudaii.github.io/estudai"><img src="../Imagens/homepage.png" alt="logo" id="hpb"></a>
+				<p id="em" style="font-family: 'Dokdo';">Estudaí</p>
+			</div>
+			<div style="width: 100vw; height: 25px; display: block; background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 255)), linear-gradient(to right,blue,#ff00ff,red,yellow);"></div>
+			<div class="sectioner">
+				<button onclick="location.href='../Matérias/index.html?c=exps'">Explicações</button>
+				<button onclick="location.href='../Matérias/index.html?c=rsms'">Resumos</button>
+				<button onclick="location.href='../Matérias/index.html?c=vids'">Vídeos</button>
+				<button onclick="location.href='../Matérias/index.html?c=quiz'">Quizzes</button>
+				<button onclick="location.href='https://estudaii.github.io/estudai#sobre'">Sobre Mim</button>
+			</div>
+		</div>
+		<div class="pagina" id="qmkr">
+			<div class="paginad" style="width: 100%; margin: 0 0; aspect-ratio: 2 / 1;">
+				<h1 class="qst">Pergunta 1</h1>
+				<p>&nbsp;</p>
+				<p>Pergunta:</p><p id="p1" contenteditable="true" style="width: 100%;">Qual é a cor do céu?</p>
+				<p>A:</p><p id="a1" contenteditable="true" style="width: 100%;">Vermelho</p>
+				<p>B:</p><p id="b1" contenteditable="true" style="width: 100%;">Verde</p>
+				<p>C:</p><p id="c1" contenteditable="true" style="width: 100%;">Azul</p>
+				<p>D:</p><p id="d1" contenteditable="true" style="width: 100%;">Amarelo</p>
+				<p>Resposta Certa:</p><p id="rc1" contenteditable="true" style="width: 100%;">C</p>
+			</div>
+			<button style="margin: 32px 0;" onclick="add()">Adicionar pergunta</button>
+			<button style="width: 100%; margin: 32px 0;" onclick="copiar()">https://estudaii.github.io/estudai/Quiz</button>
+		</div>
+		<p class="qs" style="text-align: center;">Este site está licenciado sob a <a href="https://unlicense.org/" target="_blank">Unlicense</a>.</p>
+		<p>&nbsp;</p>
+		<div style="background-color: rgba(0,0,0,0); width: 100vw; height: 100vh; position: fixed; left: 0px; top: 0px; transition: background-color 250ms ease-in-out; pointer-events: none;" id="fader">
+			<img src="../Imagens/1x1.png" style="opacity: 0; transition: opacity 250ms ease-in-out; position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); transform-origin: center center; pointer-events: none;" id="gatito"><p class="qst" style="color: white; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 32px;" id="desc2"></p></img>
+		</div>
+		<script src="../script.js"></script>
+	</body>
+</html>
