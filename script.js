@@ -254,7 +254,7 @@ function tome(a) {
 	
 	qa++
 	if (qa > tp) {
-		location.href = "QuizResultado/index.html?n="+(pontos/tp*10);
+		location.href = "QuizResultado/index.html?n="+(pontos/tp*10).toFixed(1);
 	} else {
 		rc=atob2(params.get("rc"+qa));
 		titulo.innerText = atob2(params.get("t"+qa));
